@@ -1,7 +1,7 @@
 exports.config =
   # See docs at http://brunch.readthedocs.org/en/latest/config.html.
   conventions:
-    ignored: /(^vendor\\.*\.less)|(^vendor\/.*\.less)|(^|\/)node_modules\/|(^|\/)_/
+    ignored: /(^bower_components\\.*\.less)|(^bower_components\/.*\.less)|(^|\/)node_modules\/|(^|\/)_/
     assets: /^app\/assets\//
   modules:
     definition: false
@@ -12,22 +12,12 @@ exports.config =
     javascripts:
       joinTo:
         'js/app.js': /^app/
-        'js/vendor.js': /^vendor/
+        'js/vendor.js': /^bower_components/
         'test/scenarios.js': /^test(\/|\\)e2e/
-      order:
-        before: [
-          'vendor/console-polyfill/index.js'
-          'vendor/jquery/jquery.js'
-          'vendor/angular/angular.js'
-          'vendor/angular-resource/angular-resource.js'
-          'vendor/angular-cookies/angular-cookies.js'
-          'vendor/angular-sanitize/angular-sanitize.js'
-          'vendor/bootstrap/docs/assets/js/bootstrap.js'
-        ]
 
     stylesheets:
       joinTo:
-        'css/app.css': /^(app|vendor)/
+        'css/app.css': /^(app)/
       order:
         before: [
           'app/styles/app.less'
@@ -44,15 +34,6 @@ exports.config =
       modules_folder: 'partials'
       locals: {}
 
-    bower:
-      extend:
-        "bootstrap" : 'vendor/bootstrap/docs/assets/js/bootstrap.js'
-        "angular-mocks": []
-        "styles": []
-      asserts:
-        "img" : /bootstrap(\\|\/)img/
-        "font": /font-awesome(\\|\/)font/
-
   server: 
     path: 'server.coffee'
     port: 3333
@@ -64,14 +45,4 @@ exports.config =
     watched: ['express']
     ignore: /(^[.#]|(?:~)$)/
     source: /.*\.coffee$/
-    # linter:
-    #     enabled: on
-    #     coffeelint:
-    #         pattern: /.*\.coffee$/
-    #         options:
-    #             indentation:
-    #                 value: 2
-    #                 level: "error"
-
-
 
