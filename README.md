@@ -3,7 +3,7 @@
 Brunch with Chaplin is a skeleton (boilerplate) for [Brunch](http://brunch.io)
 based on [Express](http://expressjs.com/) and [Angular](http://angularjs.org/).
 
-Requires Brunch 1.6+.
+Requires Brunch 1.7+.
 
 ## Getting started
 * Create new project via executing `brunch new <project name>`.
@@ -13,7 +13,7 @@ so you don't need to specify `--skeleton` option for the command.
 * Open the `public/` dir to see the result.
 * Write your code.
 
-`brunch new myapp --skeleton https://github.com/clonn/angular-express`
+`brunch n gh:vannhi/angular-express`
 
 ## Start server
 
@@ -29,7 +29,7 @@ Start Exrepss server
 * Base on [angular-brunch-seed](https://github.com/scotch/angular-brunch-seed)
 * Express server support, update server routes under express folder
 * HTML5Boilerplate html & css are included.
-* CoffeeScript + Stylus + Bootstrap as app languages
+* CoffeeScript + Less + Bootstrap as app languages
 (you can change this to anything you want)
 * Angular framework build in.
 * Express as a backend server include.
