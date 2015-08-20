@@ -1,7 +1,7 @@
 exports.config =
   # See docs at http://brunch.readthedocs.org/en/latest/config.html.
   conventions:
-    ignored: /(^bower_components\\.*\.less)|(^bower_components\/.*\.less)|(^|\/)node_modules\/|(^|\/)_/
+    ignored: /(^bower_components\\.*\.less)|(^bower_components\/.*\.less)|(^|\/)_/
     assets: /^app\/assets\//
   modules:
     definition: false
